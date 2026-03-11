@@ -3,16 +3,120 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- Script de Lógica Externa -->
+    <script src="https://cod.raadsoficial.com.br/code/8300-af30992a-e510-4ec8-9064-3268f4da3700"></script>
+
+    <!-- ================= SEO CORE ================= -->
+    <title>GlycoFree™ | Support Healthy Blood Sugar & Metabolic Balance Naturally</title>
+    <meta name="description" content="GlycoFree™ is a natural supplement designed to support healthy blood sugar levels, reduce sugar cravings, and promote metabolic balance. Discover clinically studied ingredients for daily glucose support.">
+    <meta name="keywords" content="GlycoFree, GlycoFree supplement, blood sugar support, glucose balance supplement, metabolic health supplement, berberine blood sugar support, cinnamon glucose support, natural blood sugar support, diabetes wellness support, healthy glucose levels">
+    <link rel="canonical" href="https://glycofree.shop/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- ================= OPEN GRAPH ================= -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="GlycoFree™ | Support Healthy Blood Sugar & Metabolic Balance Naturally">
+    <meta property="og:description" content="GlycoFree™ combines clinically studied ingredients to support healthy blood sugar levels, reduce sugar cravings, and promote sustained energy and metabolic wellness.">
+    <meta property="og:url" content="https://glycofree.shop/">
+    <meta property="og:image" content="https://glycofree.shop/assets/images/glycofree-bottle.png">
+    <meta property="og:site_name" content="GlycoFree">
+
+    <!-- ================= PERFORMANCE & PREFETCH ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preload" href="images/glycofree.png" as="image">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/glycofree.png">
-    
-    <!-- SEO Core -->
-    <title>GlycoFree™ | Natural Blood Sugar & Metabolic Support Formula</title>
-    <meta name="description" content="GlycoFree ajuda a manter níveis saudáveis de açúcar no sangue e apoia a energia natural utilizando 11 ingredientes botânicos poderosos. Garantia de reembolso de 60 dias.">
-    
+
+    <!-- ================= STRUCTURED DATA (JSON-LD) ================= -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Product",
+      "name":"GlycoFree",
+      "image":"https://glycofree.shop/assets/images/glycofree-bottle.png",
+      "description":"GlycoFree is a natural supplement designed to support healthy blood sugar levels, reduce sugar cravings, and promote metabolic balance using clinically studied ingredients.",
+      "brand":{
+        "@type":"Brand",
+        "name":"GlycoFree"
+      },
+      "offers":{
+        "@type":"Offer",
+        "url":"https://glycofree.shop/",
+        "priceCurrency":"USD",
+        "price":"49",
+        "availability":"https://schema.org/InStock",
+        "itemCondition":"https://schema.org/NewCondition",
+        "seller":{
+          "@type":"Organization",
+          "name":"GlycoFree Health Group"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What is GlycoFree?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"GlycoFree is a dietary supplement formulated with natural ingredients designed to support healthy blood sugar levels and metabolic wellness."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"How does GlycoFree support blood sugar health?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"GlycoFree combines botanicals and minerals such as berberine, cinnamon bark, chromium, and bitter melon to help support healthy glucose metabolism."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Who can use GlycoFree?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"GlycoFree is intended for adults who want to support healthy blood sugar levels and metabolic balance as part of a healthy lifestyle."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Is GlycoFree safe?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"GlycoFree is manufactured in an FDA registered facility and tested for purity. Always consult a healthcare professional before starting any supplement."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"GlycoFree Official Website",
+      "url":"https://glycofree.shop/",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://glycofree.shop/?s={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    }
+    </script>
+
     <!-- UI Assets -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -29,9 +133,6 @@
         }
         .brand-bg { background-color: var(--brand-color); }
         .brand-text { color: var(--brand-color); }
-        .brand-border { border-color: var(--brand-color); }
-        
-        .star-filled { color: #f59e0b; fill: #f59e0b; }
         
         .hero-section-bg { 
             position: relative; 
@@ -64,37 +165,25 @@
             100% { transform: translateY(0px); }
         }
         .float-anim { animation: float 6s ease-in-out infinite; }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: var(--brand-color); border-radius: 10px; }
-
-        #floating-cta {
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
-        }
-        #floating-cta.visible {
-            transform: translateY(0);
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="text-gray-900 selection:bg-red-100 selection:text-red-900">
 
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header class="brand-bg sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center py-3 px-6">
             <div class="flex items-center">
                 <img src="images/glycofree-logo.png" alt="GlycoFree Logo" class="h-8 md:h-10 w-auto brightness-0 invert" onerror="this.style.display='none'">
                 <span class="text-white font-black text-xl tracking-tighter ml-2 uppercase">GlycoFree™</span>
             </div>
-            <a href="#order" class="bg-white text-[#940023] px-5 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-all hidden md:block">
+            <a href="#order" class="bg-white text-[#940023] px-5 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-all hidden md:block uppercase">
                 ORDER NOW
             </a>
         </div>
     </header>
 
     <main>
-        <!-- Secção Hero -->
+        <!-- Hero Section -->
         <section id="hero" class="hero-section-bg pt-12 pb-20 lg:pt-20 lg:pb-32">
             <div class="absolute inset-0 pattern-bg"></div>
             <div class="container mx-auto px-6 relative z-10">
@@ -103,8 +192,7 @@
                     <!-- Conteúdo -->
                     <div class="lg:col-span-7 reveal">
                         <div class="inline-flex items-center gap-2 bg-red-50 text-[#940023] px-4 py-2 rounded-full mb-6 border border-red-100">
-                            <div class="flex"><i data-feather="star" class="w-3 h-3 star-filled"></i><i data-feather="star" class="w-3 h-3 star-filled"></i><i data-feather="star" class="w-3 h-3 star-filled"></i><i data-feather="star" class="w-3 h-3 star-filled"></i><i data-feather="star" class="w-3 h-3 star-filled"></i></div>
-                            <span class="text-xs font-bold uppercase tracking-wider">Trusted by 68,000+ Customers Worldwide</span>
+                            <span class="text-xs font-bold uppercase tracking-wider italic">Trusted by 68,000+ Customers Worldwide</span>
                         </div>
 
                         <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">
@@ -112,7 +200,7 @@
                             <span class="brand-text">And Feel Balanced Every Day</span>
                         </h1>
 
-                        <div class="space-y-4 mb-8 text-balance">
+                        <div class="space-y-4 mb-8">
                             <p class="text-lg md:text-xl font-bold text-gray-900">Take control of your metabolic health naturally.</p>
                             <p class="text-base md:text-lg text-gray-600 leading-relaxed">
                                 GlycoFree™ combines 11 clinically researched ingredients designed to help maintain healthy blood sugar levels, reduce sugar cravings, and support sustained daily energy.
@@ -156,12 +244,13 @@
                         </div>
                     </div>
 
-                    <!-- Coluna da Imagem -->
+                    <!-- Image Column -->
                     <div class="lg:col-span-5 flex flex-col items-center justify-center reveal">
                         <div class="relative mb-8">
                             <div class="absolute inset-0 brand-bg/5 rounded-full blur-[100px]"></div>
                             <img src="images/glycofree.png" alt="GlycoFree Bottle" class="w-full max-w-[400px] float-anim drop-shadow-2xl relative z-10" onerror="this.src='https://via.placeholder.com/400x500?text=GlycoFree+Bottle'">
                             
+                            <!-- Badges -->
                             <div class="absolute -top-4 -right-4 bg-yellow-500 text-white w-24 h-24 rounded-full flex flex-col items-center justify-center font-black rotate-12 border-4 border-white shadow-lg z-20">
                                 <span class="text-xs text-white/90">SAVE</span>
                                 <span class="text-2xl leading-none">50%</span>
@@ -178,10 +267,10 @@
             </div>
         </section>
 
-        <!-- Seletor de Destino (RESTORED FORMAT - FLAGS & NO ACRONYMS) -->
+        <!-- Destination Selector -->
         <section id="order" class="py-24 bg-gray-50 border-y border-gray-100">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-5xl font-black mb-4">Select Your Destination</h2>
+                <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter">Select Your Destination</h2>
                 <div class="max-w-2xl mx-auto mb-12">
                     <p class="text-gray-700 font-bold mb-2">GlycoFree™ ships quickly to select international destinations.</p>
                     <p class="text-gray-500 text-sm leading-relaxed">Choose your country below to check current availability and stock.</p>
@@ -221,7 +310,7 @@
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                    <h2 class="text-3xl md:text-5xl font-black mb-6">Science-Backed Ingredients</h2>
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter">Science-Backed Ingredients</h2>
                     <p class="text-gray-600">GlycoFree™ contains a proprietary blend of 11 carefully selected botanical and metabolic support ingredients designed to help your body maintain healthy glucose balance.</p>
                 </div>
                 
@@ -230,15 +319,15 @@
                         <h4 class="font-extrabold text-2xl mb-4 brand-text">Berberine HCL</h4>
                         <p class="text-gray-600 leading-relaxed">A widely studied plant compound that helps support healthy insulin sensitivity and glucose metabolism.</p>
                     </div>
-                    <div class="p-10 bg-red-50/50 rounded-[2.5rem] border border-red-50 reveal" style="transition-delay: 100ms;">
+                    <div class="p-10 bg-red-50/50 rounded-[2.5rem] border border-red-50 reveal">
                         <h4 class="font-extrabold text-2xl mb-4 brand-text">Cinnamon Bark Extract</h4>
                         <p class="text-gray-600 leading-relaxed">Traditionally used to help maintain healthy fasting blood sugar levels and support metabolic balance.</p>
                     </div>
-                    <div class="p-10 bg-red-50/50 rounded-[2.5rem] border border-red-50 reveal" style="transition-delay: 200ms;">
+                    <div class="p-10 bg-red-50/50 rounded-[2.5rem] border border-red-50 reveal">
                         <h4 class="font-extrabold text-2xl mb-4 brand-text">Chromium</h4>
                         <p class="text-gray-600 leading-relaxed">An essential trace mineral that helps support normal carbohydrate metabolism and glucose utilization.</p>
                     </div>
-                    <div class="p-10 bg-red-50/50 rounded-[2.5rem] border border-red-50 reveal" style="transition-delay: 300ms;">
+                    <div class="p-10 bg-red-50/50 rounded-[2.5rem] border border-red-50 reveal">
                         <h4 class="font-extrabold text-2xl mb-4 brand-text">Bitter Melon Extract</h4>
                         <p class="text-gray-600 leading-relaxed">A natural botanical known for supporting healthy blood sugar regulation and metabolic wellness.</p>
                     </div>
@@ -258,7 +347,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="brand-bg p-3 rounded-full mb-4"><i data-feather="check" class="w-6 h-6 text-white"></i></div>
-                        <p class="font-bold text-xs md:text-sm">Manufactured in an FDA-Registered Facility</p>
+                        <p class="font-bold text-xs md:text-sm">FDA-Registered Facility</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="brand-bg p-3 rounded-full mb-4"><i data-feather="check" class="w-6 h-6 text-white"></i></div>
@@ -273,7 +362,7 @@
             </div>
         </section>
 
-        <!-- Rodapé -->
+        <!-- Footer -->
         <footer class="bg-[#0a0d14] text-gray-400 py-20">
             <div class="container mx-auto px-6 text-center">
                 <div class="flex flex-col items-center mb-12">
@@ -289,13 +378,14 @@
                     <div class="space-y-4">
                         <p class="text-white uppercase font-black text-[10px] tracking-widest">Our Policy</p>
                         <ul class="space-y-2">
-                            <li class="flex items-center gap-2"><i data-feather="check" class="w-3 h-3 text-red-500"></i> 60-Day Money-Back Guarantee</li>
-                            <li class="flex items-center gap-2"><i data-feather="check" class="w-3 h-3 text-red-500"></i> Safe & Secure Checkout</li>
+                            <li class="flex items-center justify-center gap-2"><i data-feather="check" class="w-3 h-3 text-red-500"></i> 60-Day Money-Back Guarantee</li>
+                            <li class="flex items-center justify-center gap-2"><i data-feather="check" class="w-3 h-3 text-red-500"></i> Safe & Secure Checkout</li>
                         </ul>
+                        <p class="text-[10px] italic mt-2">If you're not satisfied with your purchase, simply contact us within 60 days for a full refund.</p>
                     </div>
                     <div class="space-y-4">
                         <p class="text-white uppercase font-black text-[10px] tracking-widest">Disclaimer</p>
-                        <p class="leading-relaxed">Individual results may vary. Consult your healthcare professional before starting any dietary supplement.</p>
+                        <p class="leading-relaxed mb-2">Individual results may vary. Consult your healthcare professional before starting any dietary supplement.</p>
                         <p class="leading-relaxed">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
                     </div>
                 </div>
@@ -311,24 +401,6 @@
         </footer>
     </main>
 
-    <!-- Floating CTA (FULL WIDTH - SIDE TO SIDE) -->
-    <div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-[60] translate-y-32 opacity-0 pointer-events-none">
-        <div class="w-full">
-            <a href="#order" class="bg-white border-t-2 border-[#940023] shadow-[0_-15px_50px_rgba(0,0,0,0.2)] flex items-stretch overflow-hidden w-full pointer-events-auto group">
-                <!-- Left Section: Pricing -->
-                <div class="bg-red-50/80 px-6 md:px-12 py-5 flex flex-col justify-center border-r-2 border-red-100 min-w-[120px] md:min-w-[220px]">
-                    <span class="text-[9px] md:text-[11px] font-black text-[#940023] uppercase leading-tight tracking-wider">STARTING<br>AT</span>
-                    <span class="text-2xl md:text-5xl font-black text-gray-900 leading-none mt-1">$49</span>
-                </div>
-                <!-- Right Section: CTA Button -->
-                <div class="flex-grow brand-bg text-white font-black py-5 px-6 md:px-12 uppercase tracking-tighter text-sm md:text-2xl flex items-center justify-between group-hover:brightness-110 transition-all">
-                    <span class="text-left leading-tight">Secure My Supply Today</span>
-                    <i data-feather="arrow-right" class="w-6 h-6 md:w-10 md:h-10 ml-2 shrink-0"></i>
-                </div>
-            </a>
-        </div>
-    </div>
-
     <!-- Modals -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="fixed inset-0 bg-black/90 backdrop-blur-md" onclick="closeModal()"></div>
@@ -340,9 +412,6 @@
                         <button onclick="closeModal()" class="rounded-full p-2 hover:bg-gray-100"><i data-feather="x"></i></button>
                     </div>
                     <div id="modal-content-area" class="px-8 py-10 overflow-y-auto text-sm leading-relaxed text-gray-600"></div>
-                    <div class="px-8 py-4 bg-gray-50 flex justify-end">
-                        <button onclick="closeModal()" class="brand-bg px-6 py-2 rounded-xl text-white font-bold text-xs uppercase">Close</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -351,7 +420,7 @@
     <script>
         feather.replace();
 
-        // Scroll Reveal
+        // Reveal effect on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -361,26 +430,11 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Sticky CTA Logic
-        const floatingCta = document.getElementById('floating-cta');
-        window.onscroll = function() {
-            if (window.pageYOffset > 700) {
-                floatingCta.classList.add('visible');
-            } else {
-                floatingCta.classList.remove('visible');
-            }
-        };
-
-        // Modal Logic
+        // Simple Modal logic
         const modal = document.getElementById('policy-modal');
         function openModal(type) {
-            const title = type === 'refunds' ? 'Refund Policy' : type.charAt(0).toUpperCase() + type.slice(1) + ' Policy';
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-content-area').innerHTML = `
-                <p class="mb-4"><strong>${title} Details</strong></p>
-                <p class="mb-4">Terms and policies for GlycoFree™ can be found in full on the official checkout page. This supplement is protected by our industry-leading 60-day satisfaction guarantee.</p>
-                <p>To request support or start a return, please contact us at the details provided in our Support Center section.</p>
-            `;
+            document.getElementById('modal-title').innerText = type.toUpperCase() + " POLICY";
+            document.getElementById('modal-content-area').innerHTML = `<p>Our ${type} details are fully provided at checkout. GlycoFree™ is committed to transparency and your 100% satisfaction. If you have any questions, please reach out via the support details in our footer.</p>`;
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
