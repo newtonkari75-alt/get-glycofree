@@ -31,7 +31,7 @@
             position: relative; 
             background-color: #ffffff; 
             overflow: hidden;
-            min-height: calc(100vh - 70px); /* Garante que ocupa a tela, mas respeita o conteúdo */
+            min-height: calc(100vh - 70px);
             display: flex;
             align-items: center;
         }
@@ -62,11 +62,22 @@
         }
         .float-anim { animation: float 6s ease-in-out infinite; }
 
-        /* Ajuste para garantir que caiba na primeira dobra */
         @media (min-width: 1024px) {
             h1 { line-height: 1; }
             .hero-content-wrapper { padding-top: 2rem; padding-bottom: 2rem; }
         }
+
+        .ingredient-card {
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+        }
+        .ingredient-card:hover {
+            border-color: var(--brand-color);
+            transform: translateY(-5px);
+        }
+
+        .policy-content h4 { font-weight: 800; font-size: 1.1rem; color: #111; margin-top: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; border-left: 4px solid var(--brand-color); padding-left: 10px; }
+        .policy-content p { margin-bottom: 1rem; line-height: 1.6; color: #4b5563; }
     </style>
 </head>
 <body class="text-gray-900 selection:bg-red-100 selection:text-red-900">
@@ -75,8 +86,8 @@
     <header class="brand-bg sticky top-0 z-50 shadow-md h-[60px] md:h-[70px] flex items-center">
         <div class="container mx-auto flex justify-between items-center px-4 md:px-6">
             <div class="flex items-center">
-                <!-- Fallback text se imagem não carregar -->
-                <span class="text-white font-black text-xl md:text-2xl tracking-tighter">GlycoFree</span>
+                <img src="images/glycofree-logo.png" alt="GlycoFree Logo" class="h-6 md:h-8 w-auto brightness-0 invert" onerror="this.style.display='none'">
+                <span class="text-white font-black text-xl md:text-2xl tracking-tighter ml-2">GlycoFree</span>
             </div>
             <a href="#order" class="bg-white text-[#940023] px-6 py-2 rounded-full font-bold text-xs md:text-sm hover:bg-gray-100 transition-all uppercase tracking-wide">
                 ORDER NOW
@@ -85,7 +96,7 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section (Mantida intacta para primeira dobra) -->
         <section id="hero" class="hero-section-bg">
             <div class="absolute inset-0 pattern-bg"></div>
             <div class="container mx-auto px-6 relative z-10 hero-content-wrapper">
@@ -103,13 +114,13 @@
                         </h1>
 
                         <div class="max-w-xl mx-auto lg:mx-0 mb-6">
-                            <p class="text-sm md:text-base font-bold text-gray-800 uppercase mb-2">Take control of your metabolic health naturally.</p>
+                            <p class="text-sm md:text-base font-bold text-gray-800 uppercase mb-2 text-balance">Take control of your metabolic health naturally.</p>
                             <p class="text-sm md:text-base text-gray-600 leading-relaxed">
                                 GlycoFree™ combines 11 clinically researched ingredients designed to help maintain healthy blood sugar levels, reduce sugar cravings, and support sustained daily energy.
                             </p>
                         </div>
 
-                        <!-- Checklist integrado no fluxo esquerdo -->
+                        <!-- Checklist -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mb-8 max-w-lg mx-auto lg:mx-0 text-left">
                             <div class="flex items-center gap-2">
                                 <div class="brand-bg p-1 rounded-full shrink-0"><i data-feather="check" class="text-white w-3 h-3" stroke-width="4"></i></div>
@@ -143,41 +154,14 @@
                     <!-- LADO DIREITO: Imagem do Produto -->
                     <div class="lg:col-span-5 flex flex-col items-center justify-center reveal active">
                         <div class="relative w-full max-w-[320px] md:max-w-[420px]">
-                            <!-- Glow effect background -->
                             <div class="absolute inset-0 bg-red-600/5 rounded-full blur-[100px] transform scale-150"></div>
-                            
-                            <!-- Imagem principal com fallback -->
                             <img src="https://get.glycofree.shop/assets/images/glycofree-bottle.png" alt="GlycoFree Bottles" class="w-full h-auto float-anim relative z-10 drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/450x500?text=GlycoFree+Supplements'">
-                            
-                            <!-- Selo de Desconto -->
                             <div class="absolute -top-4 -right-4 bg-yellow-500 text-white w-20 h-20 md:w-24 md:h-24 rounded-full flex flex-col items-center justify-center font-black rotate-12 border-4 border-white shadow-xl z-20">
                                 <span class="text-[10px]">SAVE</span>
                                 <span class="text-2xl leading-none">50%</span>
                             </div>
-                            
-                            <!-- Banner inferior -->
                             <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-[#940023] text-white px-6 py-2 rounded-lg font-bold text-[10px] md:text-xs shadow-xl z-20 -rotate-1 border-2 border-white uppercase tracking-tight whitespace-nowrap">
                                 LIMITED TIME OFFER
-                            </div>
-                        </div>
-                        
-                        <!-- Selos de Certificação (Menores para caber na dobra) -->
-                        <div class="mt-10 grid grid-cols-4 gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 max-w-[300px]">
-                            <div class="flex flex-col items-center gap-1">
-                                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center p-2"><img src="https://cdn-icons-png.flaticon.com/512/2830/2830175.png" alt="GMP"></div>
-                                <span class="text-[8px] font-bold text-center">GMP</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1">
-                                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center p-2"><img src="https://cdn-icons-png.flaticon.com/512/6241/6241280.png" alt="FDA"></div>
-                                <span class="text-[8px] font-bold text-center">FDA</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1">
-                                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center p-2"><img src="https://cdn-icons-png.flaticon.com/512/3241/3241517.png" alt="GMO"></div>
-                                <span class="text-[8px] font-bold text-center">GMO FREE</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1">
-                                <div class="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center p-2"><img src="https://flagcdn.com/w80/us.png" class="opacity-80" alt="USA"></div>
-                                <span class="text-[8px] font-bold text-center">MADE IN USA</span>
                             </div>
                         </div>
                     </div>
@@ -185,37 +169,190 @@
             </div>
         </section>
 
-        <!-- Destinos (Segunda Tela) -->
-        <section id="order" class="py-20 bg-gray-50 border-t border-gray-100">
+        <!-- Destinos -->
+        <section id="order" class="py-16 bg-gray-50 border-t border-gray-100">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-black mb-12 uppercase tracking-tighter">Choose Your Destination</h2>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <!-- Cards de Países -->
-                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-40 flex flex-col items-center gap-3">
-                        <img src="https://flagcdn.com/w160/us.png" class="w-12 h-auto rounded" alt="USA">
-                        <span class="font-bold">USA</span>
+                <h2 class="text-2xl md:text-3xl font-black mb-10 uppercase tracking-tighter">Choose Your Destination</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-36 flex flex-col items-center gap-3">
+                        <img src="https://flagcdn.com/w160/us.png" class="w-10 h-auto rounded shadow-sm" alt="USA">
+                        <span class="font-bold text-sm">USA</span>
                     </a>
-                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-40 flex flex-col items-center gap-3">
-                        <img src="https://flagcdn.com/w160/ca.png" class="w-12 h-auto rounded" alt="Canada">
-                        <span class="font-bold">Canada</span>
+                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-36 flex flex-col items-center gap-3">
+                        <img src="https://flagcdn.com/w160/ca.png" class="w-10 h-auto rounded shadow-sm" alt="Canada">
+                        <span class="font-bold text-sm">Canada</span>
                     </a>
-                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-40 flex flex-col items-center gap-3">
-                        <img src="https://flagcdn.com/w160/au.png" class="w-12 h-auto rounded" alt="Australia">
-                        <span class="font-bold">Australia</span>
+                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-36 flex flex-col items-center gap-3">
+                        <img src="https://flagcdn.com/w160/au.png" class="w-10 h-auto rounded shadow-sm" alt="Australia">
+                        <span class="font-bold text-sm">Australia</span>
                     </a>
-                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-40 flex flex-col items-center gap-3">
-                        <img src="https://flagcdn.com/w160/gb.png" class="w-12 h-auto rounded" alt="UK">
-                        <span class="font-bold">UK</span>
+                    <a href="#" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-red-600 transition-all w-36 flex flex-col items-center gap-3">
+                        <img src="https://flagcdn.com/w160/gb.png" class="w-10 h-auto rounded shadow-sm" alt="UK">
+                        <span class="font-bold text-sm">UK</span>
                     </a>
                 </div>
             </div>
         </section>
+
+        <!-- Science-Backed Ingredients -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter">Science-Backed Ingredients</h2>
+                    <p class="text-gray-600">GlycoFree™ contains a proprietary blend of 11 carefully selected botanical and metabolic support ingredients designed to help your body maintain healthy glucose balance.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="ingredient-card p-8 rounded-3xl bg-white text-center">
+                        <div class="w-16 h-16 brand-bg/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img src="images/ingredient-1.png" class="w-10 h-10 object-contain" alt="Berberine" onerror="this.src='https://cdn-icons-png.flaticon.com/512/822/822143.png'">
+                        </div>
+                        <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Berberine HCL</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">A widely studied plant compound that helps support healthy insulin sensitivity and glucose metabolism.</p>
+                    </div>
+
+                    <div class="ingredient-card p-8 rounded-3xl bg-white text-center">
+                        <div class="w-16 h-16 brand-bg/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img src="images/ingredient-2.png" class="w-10 h-10 object-contain" alt="Cinnamon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3419/3419106.png'">
+                        </div>
+                        <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Cinnamon Bark</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Traditionally used to help maintain healthy fasting blood sugar levels and support metabolic balance.</p>
+                    </div>
+
+                    <div class="ingredient-card p-8 rounded-3xl bg-white text-center">
+                        <div class="w-16 h-16 brand-bg/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img src="images/ingredient-3.png" class="w-10 h-10 object-contain" alt="Chromium" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2807/2807264.png'">
+                        </div>
+                        <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Chromium</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">An essential trace mineral that helps support normal carbohydrate metabolism and glucose utilization.</p>
+                    </div>
+
+                    <div class="ingredient-card p-8 rounded-3xl bg-white text-center">
+                        <div class="w-16 h-16 brand-bg/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <img src="images/ingredient-4.png" class="w-10 h-10 object-contain" alt="Bitter Melon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1041/1041916.png'">
+                        </div>
+                        <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Bitter Melon</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">A natural botanical known for supporting healthy blood sugar regulation and metabolic wellness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Quality Promise & Stats -->
+        <section class="py-20 bg-gray-900 text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 opacity-10 pointer-events-none translate-x-1/3 -translate-y-1/3">
+                <img src="images/glycofree.png" class="w-[600px]" alt="">
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-black mb-10 uppercase tracking-tighter">Our Quality Promise</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-500 p-1 rounded-full shrink-0"><i data-feather="check" class="text-white w-4 h-4" stroke-width="4"></i></div>
+                                <p class="font-bold text-lg">100% Organic & Non-GMO Ingredients</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-500 p-1 rounded-full shrink-0"><i data-feather="check" class="text-white w-4 h-4" stroke-width="4"></i></div>
+                                <p class="font-bold text-lg">Manufactured in an FDA-Registered Facility</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-500 p-1 rounded-full shrink-0"><i data-feather="check" class="text-white w-4 h-4" stroke-width="4"></i></div>
+                                <p class="font-bold text-lg">Third-Party Lab Tested for Purity & Quality</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-500 p-1 rounded-full shrink-0"><i data-feather="check" class="text-white w-4 h-4" stroke-width="4"></i></div>
+                                <p class="font-bold text-lg">No Artificial Stimulants or Fillers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center lg:text-right">
+                        <div class="inline-block bg-white/5 border border-white/10 p-12 rounded-[3rem] backdrop-blur-xl">
+                            <p class="text-5xl md:text-7xl font-black brand-text mb-4">2.5M+</p>
+                            <p class="text-xl md:text-2xl font-bold uppercase tracking-widest text-white/60">Bottles Shipped Worldwide</p>
+                            <div class="mt-8 flex justify-center lg:justify-end gap-2">
+                                <i data-feather="star" class="fill-yellow-500 text-yellow-500 w-5 h-5"></i>
+                                <i data-feather="star" class="fill-yellow-500 text-yellow-500 w-5 h-5"></i>
+                                <i data-feather="star" class="fill-yellow-500 text-yellow-500 w-5 h-5"></i>
+                                <i data-feather="star" class="fill-yellow-500 text-yellow-500 w-5 h-5"></i>
+                                <i data-feather="star" class="fill-yellow-500 text-yellow-500 w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Footer -->
+        <footer class="bg-[#0a0a0a] text-gray-500 pt-20 pb-10">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                    <div class="lg:col-span-1">
+                        <div class="flex items-center mb-6">
+                            <img src="images/glycofree-logo.png" alt="GlycoFree" class="h-6 brightness-0 invert" onerror="this.style.display='none'">
+                            <span class="text-white font-black text-xl tracking-tighter ml-2">GlycoFree</span>
+                        </div>
+                        <p class="text-xs leading-relaxed opacity-60">Empowering your health journey through premium, science-backed nutritional support.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-black uppercase tracking-widest text-xs mb-6">Support Center</h4>
+                        <div class="text-[11px] space-y-3">
+                            <p class="flex items-center gap-2"><i data-feather="map-pin" class="w-3 h-3"></i> Aurora, CO 80011, USA</p>
+                            <p class="flex items-center gap-2"><i data-feather="phone" class="w-3 h-3"></i> (302) 200-3480</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-black uppercase tracking-widest text-xs mb-6">Our Policy</h4>
+                        <div class="text-[11px] space-y-4">
+                            <p class="flex items-center gap-2 text-white font-bold"><i data-feather="shield" class="w-3 h-3 text-green-500"></i> 60-Day Money-Back Guarantee</p>
+                            <p class="flex items-center gap-2 text-white font-bold"><i data-feather="lock" class="w-3 h-3 text-green-500"></i> Safe & Secure Checkout</p>
+                            <p class="opacity-60 leading-relaxed italic">If you're not satisfied with your purchase, simply contact us within 60 days for a full refund.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-black uppercase tracking-widest text-xs mb-6">Disclaimer</h4>
+                        <div class="text-[10px] space-y-4 leading-relaxed opacity-60">
+                            <p>Individual results may vary. Consult your healthcare professional before starting any dietary supplement.</p>
+                            <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex gap-8 text-[10px] font-black uppercase tracking-widest">
+                        <button onclick="openModal('terms')" class="hover:text-white transition-colors">Terms</button>
+                        <button onclick="openModal('privacy')" class="hover:text-white transition-colors">Privacy</button>
+                        <button onclick="openModal('refunds')" class="hover:text-white transition-colors">Refunds</button>
+                    </div>
+                    <p class="text-[10px] opacity-30 uppercase font-bold tracking-widest">&copy; 2025 GlycoFree Health Group. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
     </main>
+
+    <!-- Modals -->
+    <div id="policy-modal" class="fixed inset-0 z-[100] hidden">
+        <div class="fixed inset-0 bg-black/90 backdrop-blur-md" onclick="closeModal()"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4">
+                <div class="relative transform overflow-hidden rounded-[2rem] bg-white text-left shadow-2xl transition-all sm:w-full sm:max-w-2xl max-h-[85vh] flex flex-col">
+                    <div class="bg-white px-6 py-4 border-b border-gray-100 flex justify-between items-center sticky top-0">
+                        <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight" id="modal-title">Legal Details</h3>
+                        <button onclick="closeModal()" class="rounded-full p-2 hover:bg-gray-100 transition-colors"><i data-feather="x"></i></button>
+                    </div>
+                    <div id="modal-content-area" class="px-6 py-8 overflow-y-auto text-sm leading-relaxed text-gray-600 policy-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         feather.replace();
 
-        // Animação de revelação ao rolar
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -224,6 +361,39 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const modal = document.getElementById('policy-modal');
+        const modalContent = document.getElementById('modal-content-area');
+        const modalTitle = document.getElementById('modal-title');
+
+        const modalData = {
+            privacy: {
+                title: "Privacy Policy",
+                content: `<h4>Information Collection</h4><p>We collect information you provide directly to us when you make a purchase or sign up for our newsletter.</p><h4>Use of Information</h4><p>We use the information we collect to process orders, provide customer support, and improve our products.</p>`
+            },
+            terms: {
+                title: "Terms of Service",
+                content: `<h4>General Conditions</h4><p>By using our website, you agree to comply with and be bound by these terms.</p><h4>Product Use</h4><p>GlycoFree is intended for adult use and should be used as directed on the label.</p>`
+            },
+            refunds: {
+                title: "Refund Policy",
+                content: `<h4>60-Day Guarantee</h4><p>We offer a full 60-day money-back guarantee. If you are not satisfied, return the product for a full refund of the purchase price.</p><h4>How to Return</h4><p>Contact our support center via phone or email to initiate the return process.</p>`
+            }
+        };
+
+        function openModal(type) {
+            const data = modalData[type];
+            if(data) {
+                modalTitle.innerText = data.title;
+                modalContent.innerHTML = data.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeModal() { 
+            modal.classList.add('hidden'); 
+            document.body.style.overflow = '';
+        }
     </script>
 </body>
 </html>
