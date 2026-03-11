@@ -113,15 +113,14 @@
 
         .text-balance { text-wrap: balance; }
 
-        /* Estilos dos Modais */
+        /* Policy Modal Content */
         .policy-content h4 { font-weight: 800; font-size: 1.1rem; color: #111; margin-top: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; border-left: 4px solid var(--brand-color); padding-left: 10px; }
         .policy-content p { margin-bottom: 1rem; line-height: 1.6; color: #4b5563; }
-        .policy-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #4b5563; }
     </style>
 </head>
 <body class="text-gray-900 selection:bg-red-100 selection:text-red-900">
 
-    <!-- Cabeçalho (Header) -->
+    <!-- Header -->
     <header class="brand-bg sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center py-3 px-4 md:px-6">
             <div class="flex items-center">
@@ -140,7 +139,7 @@
             <div class="container mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     
-                    <!-- 1. Conteúdo de Introdução -->
+                    <!-- Text Content (Intro) - Order 1 on Mobile -->
                     <div class="lg:col-span-7 order-1 flex flex-col text-center lg:text-left">
                         <div class="inline-flex items-center gap-2 bg-red-50 text-[#940023] px-4 py-2 rounded-full mb-6 border border-red-100 mx-auto lg:mx-0">
                             <span class="text-[10px] md:text-xs font-bold uppercase tracking-wider">Trusted by 68,000+ Customers Worldwide</span>
@@ -159,8 +158,8 @@
                         </div>
                     </div>
 
-                    <!-- 2. Imagem do Produto (Antes do botão no mobile) -->
-                    <div class="lg:col-span-5 order-2 lg:order-2 flex flex-col items-center justify-center reveal mt-2 md:mt-0">
+                    <!-- Product Image - Order 2 on Mobile -->
+                    <div class="lg:col-span-5 order-2 lg:order-2 flex flex-col items-center justify-center reveal">
                         <div class="relative mb-8">
                             <div class="absolute inset-0 brand-bg/5 rounded-full blur-[80px]"></div>
                             <img src="images/glycofree.png" alt="GlycoFree Bottle" class="w-full max-w-[300px] md:max-w-[400px] float-anim drop-shadow-2xl relative z-10" onerror="this.src='https://via.placeholder.com/400x500?text=GlycoFree+Bottle'">
@@ -178,8 +177,8 @@
                         </div>
                     </div>
 
-                    <!-- 3. Checklist + Botão CTA -->
-                    <div class="lg:col-span-7 order-3 flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <!-- Checklist + CTA - Order 3 on Mobile -->
+                    <div class="lg:col-span-7 order-3 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
                         <div class="inline-block text-left mb-8 md:mb-10 w-full lg:w-auto">
                             <div class="space-y-3 max-w-xs md:max-w-none mx-auto lg:mx-0">
                                 <div class="flex items-start gap-3">
@@ -215,11 +214,12 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Seletor de Destino (CENTERED LAST ITEM) -->
+        <!-- Destination Selector -->
         <section id="order" class="py-20 bg-gray-50 border-y border-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tighter text-gray-900 text-balance">Select Your Destination</h2>
@@ -228,30 +228,29 @@
                     <p class="text-gray-500 text-xs md:text-sm leading-relaxed">Choose your country below to check current availability and stock.</p>
                 </div>
 
-                <!-- Flex container with wrap and justify-center to auto-center orphan items -->
                 <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-4 md:gap-6">
                     <!-- Australia -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6/" class="btn-shine bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6#kits" class="bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
                         <img src="https://flagcdn.com/w160/au.png" class="w-12 md:w-16 h-auto rounded-sm shadow-sm" alt="Australia">
                         <span class="font-bold text-gray-800 text-sm md:text-lg transition-colors group-hover:text-[#940023]">Australia</span>
                     </a>
                     <!-- Canada -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6/" class="btn-shine bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6#kits" class="bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
                         <img src="https://flagcdn.com/w160/ca.png" class="w-12 md:w-16 h-auto rounded-sm shadow-sm" alt="Canada">
                         <span class="font-bold text-gray-800 text-sm md:text-lg transition-colors group-hover:text-[#940023]">Canada</span>
                     </a>
                     <!-- New Zealand -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6/" class="btn-shine bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6#kits" class="bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
                         <img src="https://flagcdn.com/w160/nz.png" class="w-12 md:w-16 h-auto rounded-sm shadow-sm" alt="New Zealand">
                         <span class="font-bold text-gray-800 text-sm md:text-lg transition-colors group-hover:text-[#940023]">New Zealand</span>
                     </a>
                     <!-- United Kingdom -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6/" class="btn-shine bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6#kits" class="bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
                         <img src="https://flagcdn.com/w160/gb.png" class="w-12 md:w-16 h-auto rounded-sm shadow-sm" alt="United Kingdom">
                         <span class="font-bold text-gray-800 text-sm md:text-lg transition-colors group-hover:text-[#940023] text-center leading-tight">United Kingdom</span>
                     </a>
                     <!-- United States -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6/" class="btn-shine bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2W5HT9M6#kits" class="bg-white border border-gray-100 p-8 rounded-[1.5rem] flex flex-col items-center justify-center gap-4 transition-all group shadow-sm hover:border-[#940023] w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] min-w-[150px]">
                         <img src="https://flagcdn.com/w160/us.png" class="w-12 md:w-16 h-auto rounded-sm shadow-sm" alt="United States">
                         <span class="font-bold text-gray-800 text-sm md:text-lg transition-colors group-hover:text-[#940023]">United States</span>
                     </a>
@@ -259,63 +258,7 @@
             </div>
         </section>
 
-        <!-- Science-Backed Ingredients -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                    <h2 class="text-2xl md:text-4xl font-black mb-6 uppercase tracking-tighter">Science-Backed Ingredients</h2>
-                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">GlycoFree™ contains a proprietary blend of 11 carefully selected botanical and metabolic support ingredients designed to help your body maintain healthy glucose balance.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    <div class="p-8 bg-red-50/30 rounded-[2.5rem] border border-red-50 reveal">
-                        <h4 class="font-extrabold text-xl mb-4 brand-text uppercase tracking-tight">Berberine HCL</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">A widely studied plant compound that helps support healthy insulin sensitivity and glucose metabolism.</p>
-                    </div>
-                    <div class="p-8 bg-red-50/30 rounded-[2.5rem] border border-red-50 reveal">
-                        <h4 class="font-extrabold text-xl mb-4 brand-text uppercase tracking-tight">Cinnamon Bark Extract</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">Traditionally used to help maintain healthy fasting blood sugar levels and support metabolic balance.</p>
-                    </div>
-                    <div class="p-8 bg-red-50/30 rounded-[2.5rem] border border-red-50 reveal">
-                        <h4 class="font-extrabold text-xl mb-4 brand-text uppercase tracking-tight">Chromium</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">An essential trace mineral that helps support normal carbohydrate metabolism and glucose utilization.</p>
-                    </div>
-                    <div class="p-8 bg-red-50/30 rounded-[2.5rem] border border-red-50 reveal">
-                        <h4 class="font-extrabold text-xl mb-3 brand-text uppercase tracking-tight">Bitter Melon Extract</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">A natural botanical known for supporting healthy blood sugar regulation and metabolic wellness.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Quality Promise -->
-        <section class="py-20 bg-[#0a0d14] text-white relative overflow-hidden">
-            <div class="absolute inset-0 pattern-bg opacity-5"></div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
-                <h2 class="text-2xl md:text-4xl font-black mb-12 uppercase tracking-tighter">Our Quality Promise</h2>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-                    <div class="flex flex-col items-center">
-                        <div class="brand-bg p-3 rounded-full mb-4 shadow-lg"><i data-feather="check" class="w-5 h-5 text-white"></i></div>
-                        <p class="font-bold text-[10px] md:text-xs uppercase tracking-wider text-gray-300">100% Organic & Non-GMO</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="brand-bg p-3 rounded-full mb-4 shadow-lg"><i data-feather="check" class="w-5 h-5 text-white"></i></div>
-                        <p class="font-bold text-[10px] md:text-xs uppercase tracking-wider text-gray-300">FDA-Registered Facility</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="brand-bg p-3 rounded-full mb-4 shadow-lg"><i data-feather="check" class="w-5 h-5 text-white"></i></div>
-                        <p class="font-bold text-[10px] md:text-xs uppercase tracking-wider text-gray-300">Third-Party Lab Tested</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="brand-bg p-3 rounded-full mb-4 shadow-lg"><i data-feather="check" class="w-5 h-5 text-white"></i></div>
-                        <p class="font-bold text-[10px] md:text-xs uppercase tracking-wider text-gray-300">No Artificial Fillers</p>
-                    </div>
-                </div>
-                <p class="text-red-500 font-black italic text-sm md:text-lg">Over 2.5 million bottles shipped worldwide.</p>
-            </div>
-        </section>
-
-        <!-- Rodapé (Footer) -->
+        <!-- Footer -->
         <footer class="bg-black text-gray-500 py-16">
             <div class="container mx-auto px-6 text-center">
                 <div class="flex flex-col items-center mb-10">
@@ -331,11 +274,11 @@
                     </div>
                     <div class="space-y-3">
                         <p class="text-white uppercase font-black tracking-widest">Our Policy</p>
-                        <p>60-Day Money-Back Guarantee<br>Safe & Secure Checkout</p>
+                        <p>180-Day Money-Back Guarantee<br>Safe & Secure Checkout</p>
                     </div>
                     <div class="space-y-3 px-4">
                         <p class="text-white uppercase font-black tracking-widest">Disclaimer</p>
-                        <p class="leading-relaxed">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary by individual.</p>
+                        <p class="leading-relaxed">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
                     </div>
                 </div>
 
@@ -344,20 +287,19 @@
                     <button onclick="openModal('privacy')" class="hover:text-white transition-colors">Privacy Policy</button>
                     <button onclick="openModal('refunds')" class="hover:text-white transition-colors">Refund Policy</button>
                 </div>
-
                 <p class="text-[9px] opacity-20 uppercase tracking-widest font-bold">&copy; 2025 GlycoFree Health Group. All Rights Reserved.</p>
             </div>
         </footer>
     </main>
 
-    <!-- Modais -->
+    <!-- Modals -->
     <div id="policy-modal" class="fixed inset-0 z-[100] hidden">
         <div class="fixed inset-0 bg-black/90 backdrop-blur-md" onclick="closeModal()"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4">
                 <div class="relative transform overflow-hidden rounded-[2rem] bg-white text-left shadow-2xl transition-all sm:w-full sm:max-w-2xl max-h-[85vh] flex flex-col">
                     <div class="bg-white px-6 py-4 border-b border-gray-100 flex justify-between items-center sticky top-0">
-                        <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight" id="modal-title">Details</h3>
+                        <h3 class="text-lg font-black text-gray-900 uppercase tracking-tight" id="modal-title">Legal Details</h3>
                         <button onclick="closeModal()" class="rounded-full p-2 hover:bg-gray-100 transition-colors"><i data-feather="x"></i></button>
                     </div>
                     <div id="modal-content-area" class="px-6 py-8 overflow-y-auto text-sm leading-relaxed text-gray-600 policy-content"></div>
@@ -385,41 +327,15 @@
         const modalData = {
             privacy: {
                 title: "Privacy Policy",
-                content: `
-                    <p><strong>Effective Date: November, 2023</strong></p>
-                    <p>The following Privacy Policy governs the online information collection practices of GlycoFree ("we" or "us"). Specifically, it outlines the types of information that we gather about you while you are using the GlycoFree website (the "Site"), and the ways in which we use this information.</p>
-                    <h4>How We Collect and Use Information</h4>
-                    <p>We may collect and store personal or other information that you voluntarily supply to us online while using the Site. The Site only contacts individuals who specifically request that we do so or in the event that they have signed up to receive our messaging, attended one of our events, or have purchased one of our products.</p>
-                    <h4>Cookies</h4>
-                    <p>We also collect and store information that is generated automatically as you navigate online through the Site. For example, we may collect information about your computer's connection to the Internet, which allows us to improve the delivery of our web pages to you and to measure traffic on the Site.</p>
-                    <h4>Google Analytics</h4>
-                    <p>We also use Google Analytics Advertiser Features to optimize our business. Advertiser features include Remarketing with Google Analytics and Google Display Network Impression Reporting.</p>
-                    <h4>General Data Privacy Regulation (GDPR)</h4>
-                    <p>If you are a resident of the European Economic Area (EEA), you may have the right to request access to, correction of, deletion of; portability of; and restriction or objection to processing of your personal data.</p>
-                    <p><strong>Contact: support@GlycoFreeoficial.com</strong></p>
-                `
+                content: `<p><strong>Effective Date: November, 2023</strong></p><p>This policy outlines the types of information that we gather about you while you are using the GlycoFree website and the ways in which we use this information.</p><h4>How We Collect and Use Information</h4><p>We may collect personal information that you voluntarily supply to us online. We also collect automatically generated information as you navigate the site.</p><h4>Cookies</h4><p>We use cookies to improve your experience and deliver advertisements based on user trends.</p><h4>GDPR</h4><p>Residents of the EEA have the right to request access to or deletion of their personal data. Contact: support@GlycoFreeoficial.com</p>`
             },
             terms: {
                 title: "Terms of Service",
-                content: `
-                    <p><strong>Effective Date: November, 2023</strong></p>
-                    <h4>General</h4>
-                    <p>This website (the "Site") is owned and operated by Glycofree (“COMPANY”). By using the Site, you agree to be bound by these Terms of Service. We reserve the right to change these Terms of Service from time to time.</p>
-                    <h4>Intellectual Property Rights</h4>
-                    <p>All materials available on the Site are the property of us and/or our affiliates or licensors, and are protected by copyright, trademark, and other intellectual property laws.</p>
-                    <h4>Refund Policy</h4>
-                    <p>Contact customer service by email at support@beneonature.com or phone at +18772864137 with your order number. You have 180 days from date of purchase to make a request for a full refund.</p>
-                `
+                content: `<p><strong>Effective Date: November, 2023</strong></p><h4>General</h4><p>This site is owned by Glycofree. By using it, you agree to these Terms. We reserve the right to change them at any time.</p><h4>Intellectual Property</h4><p>Materials on the site are protected by copyright laws and are for personal noncommercial use only.</p><h4>Refunds</h4><p>Contact support@beneonature.com within 180 days for a full refund.</p>`
             },
             refunds: {
                 title: "Refund Policy",
-                content: `
-                    <p><strong>Order Now With Confidence With Our 100% Money Back Guarantee.</strong></p>
-                    <p>Try out the product for a full 180 days and if you aren't satisfied, we’ll gladly refund all your money, no questions asked. There’s absolutely no risk in giving it a try.</p>
-                    <h4>Here’s How It Works:</h4>
-                    <p>If for any reason you're dissatisfied at any time during the first 180 days after purchase, simply call or email us to request a refund and you'll get all your money back.</p>
-                    <p><strong>Return Address:</strong><br>GlycoFree<br>P.O. Box 90129 Lakeland Fl, 33804, USA</p>
-                `
+                content: `<h4>100% Money Back Guarantee</h4><p>Try GlycoFree for 180 days. If you aren't satisfied, we will refund your money, no questions asked.</p><h4>Returns</h4><p>To request a refund, simply email or call us. Return unused bottles to: GlycoFree, P.O. Box 90129 Lakeland Fl, 33804, USA.</p>`
             }
         };
 
